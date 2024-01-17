@@ -16,10 +16,10 @@ def number_of_subscribers(subreddit):
     Returns:
         The number of subcribers."""
     # Putting our url in a variable.
-    address = "https://www.reddit.com/r/{}/about/.json".format(subreddit)
+    address = "https://www.reddit.com/r/{}/about.json".format(subreddit)
 
     # Creating a custom user_agent to avoid getting errors related to too many requests
-    headers = {"User-Agents" : "Linux-2024.v1.0.0(user_1)"}
+    headers = {"User-Agent" : "Linux-2024.v1.0.0(user_1)"}
 
     # allow_redirects = False because i dont want to control redirects manually.
     response = requests.get(address, headers=headers, allow_redirects=False)
